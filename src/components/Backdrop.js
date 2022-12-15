@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Backdrop = () => {
+export default function Backdrop() {
     return (
         <div className='backdrop' />
     )
