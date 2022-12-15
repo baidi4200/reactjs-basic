@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Modal = () => {
+export default function Modal() {
     return (
         <div className='modal'>
             <p>Are you sure</p>
