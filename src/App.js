@@ -1,13 +1,17 @@
-import './App.css';
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import "./App.css";
+import AllMeetups from "./pages/AllMeetups";
+import Favourites from "./pages/Favourites";
+import NewMeetups from "./pages/NewMeetups";
 
 function App() {
   return (
-    <div className="App">
-
-      <h1>My Todos</h1>
-
-
-    </div>
+    <Routes>
+      <Route path="/" exact element={<AllMeetups />} />
+      <Route path="/favourites" element={<Favourites />} />
+      <Route path="/NewMeetups" element={<NewMeetups />} />
+    </Routes>
   );
 }
 
