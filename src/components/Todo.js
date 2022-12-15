@@ -8,6 +8,9 @@ export const Todo = (props) => {
         setmodalIsOpen(true);
 
     };
+    const handleCloseHandler = () => {
+        setmodalIsOpen(false);
+    };
     return (
         <div className="card">
             <h2 style={{ color: 'black' }}>{props.text}</h2>
@@ -17,8 +20,8 @@ export const Todo = (props) => {
                 </button>
 
             </div>
-            {modalIsOpen && <Modal />}
-            {modalIsOpen ? <Backdrop /> : null}
+            {modalIsOpen && <Modal onCancel={handleCloseHandler} onConfirm={handleCloseHandler} />}
+            {modalIsOpen ? <Backdrop onClick={handleCloseHandler} /> : null}
         </div>
     );
 };
